@@ -1,0 +1,500 @@
+@import 'mixins';
+@import 'variable';
+@import 'font';
+
+.head {
+	@include w(100%);
+	@include h(835px);
+	background: url('../img/head_bg.png') -300px 0 no-repeat;
+	background-size: cover;
+	box-sizing: border-box;
+	
+	
+	&__container {
+		width: $w90;
+		@include mgA;
+		
+		&--h1 {
+			text-align: $tac;
+			@include fs(48px);
+			color: $white;
+			@include j;
+			@include ls(0.1em);
+			padding: 280px 0 10px 0;
+		}
+
+		&--h2 {
+			text-align: $tac;
+			@include fs(22px);
+			color: $white;
+			@include j1;
+			@include ls(0.31em);
+			padding-bottom: 55px;
+		}
+
+		&--buttons {
+			float: left;
+			display: block;
+			margin: 0 auto 0 20.5%;
+			@include w(59%);
+			@include h(60px);
+			
+		}
+
+		&--search {
+			@include w(77%);
+			@include h(60px);
+			@include bgCol($white);
+			box-sizing: border-box;
+			border: none;
+			color: $mediumGray1;
+			@include fs(14px);
+			@include ls(0.2em);
+			@include j1;
+			text-align: $tac;
+		}
+
+		&--b {
+			margin-top: -5px;
+			@include fs(14px);
+			text-transform: uppercase;
+			color: $white;
+			font-family: 'Aleo Regular';
+		}
+
+		&--btn {
+			@include w(23%);
+			@include h(60px);
+			@include bgCol($mediumBlue);
+			box-sizing: border-box;
+			float: right;
+			border: 2px solid $white;
+			text-align: $tac;
+			padding-top: 15px; 
+			
+			&:hover {
+				border-color: $mediumBlue;
+				background-color: inherit;
+				color: $mediumBlue;
+			}
+		}
+
+		&--p {
+			@include fs(14px);
+			clear: both;
+			text-align: $tac;
+			color: $white;
+			@include ls(0.2em);
+			@include j;
+			padding: 120px 0 15px 0;
+		}
+
+		& .scroll_down {
+			margin-left: 49.65%;
+			margin-bottom: 120px;
+			cursor: pointer;
+		}
+
+		&--nav {
+			clear: both;
+			float: left;
+			box-sizing: border-box;
+		}
+
+		&--navLogo {
+			@include fs(24px);
+			color: $white;
+			@include j;
+			text-transform: uppercase;
+			padding: 35px 0 0 0;
+			@include ls(0.1em);
+			float: left;
+		}
+
+		&--ul {
+			font-size: 0;
+			margin: 35px 0 0 52.7%;
+		}
+
+		&--li {
+			@include fs(14px);
+			color: $white;
+			display: inline-block;
+			font-family: 'Aleo Regular';
+			text-transform: uppercase;
+			padding-left: 5.7%;
+		}
+
+		&--a {
+			text-decoration: none;
+			color: $white;
+			font-family: 'Aleo Regular';
+			
+			&:hover {
+				transform: scale(1.1);
+				color: $lightRed;
+			}
+		}
+	}
+}
+
+.navBg {
+	@include w(100%);
+	@include h(80px);
+	@include bgCol($mediumBlue);
+	box-sizing: border-box;
+}
+
+.main {
+	@include w(100%);
+	@include h(685px);
+	background: url('../img/main_bg.png') -300px 0  no-repeat;
+	background-size: cover;
+	box-sizing: border-box;
+	
+	&__container {
+		width: $w90;
+		@include mgA;
+		
+		&--left, &--right {
+			@include w(50%);
+			@include h(685px);
+		}
+
+		&--left {
+			float: left;
+		}
+
+		&--h1 {
+			text-align: left;
+			@include fs(36px);
+			color: $white;
+			font-family: 'Aleo Regular';
+			padding: 205px 0 70px 0;
+		}
+
+		&--p {
+			text-align: left;
+			@include fs(16px);
+			@include lH(26px);
+			color: $lightGray;
+			@include j1;
+		}
+
+		&--btn {
+			@include w(40.5%);
+			@include h(60px);
+			@include bgCol($mediumBlue);
+			color: $white;
+			text-transform: uppercase;
+			text-align: $tac;
+			@include fs(16px);
+			font-family: 'Aleo Regular';
+			border: none;
+			margin-top: 50px;
+			@include ls(0.075em);
+		}
+
+		&--right {
+			float: right;
+		}
+
+		&--right img {
+			@include w(63%);
+			@include h(220px);
+		}
+
+		&--rightImg1 {
+			position: relative;
+			margin: 120px 0 5px 14.4%;
+		}
+
+		&--rightImg2 {
+			margin-left: 37%;
+		}
+	}
+}
+
+.sect {
+	@include w(100%);
+	@include h(337px);
+	background: $brown url('../img/icons/sect_dots.png') 50% 44px no-repeat;
+	
+	&__container {
+		width: $w90;
+		@include mgA;
+		
+		&--left, &--middle, &--right {
+			@include w(33.3%);
+			@include h(337px);
+			text-align: $tac;
+			padding: 98px 0 33px 0;
+			
+			& .img1, & .img2 {
+				padding-top: 18px;
+				
+				&:hover {
+					transform: scale(1.1);
+					cursor: pointer;
+				}
+			}
+
+			& .img3 {
+				padding-top: 15px;
+				&:hover {
+					transform: scale(1.05);
+					cursor: pointer;
+				}
+			}
+		}
+
+		&--left {
+			float: left;
+		}
+
+		&--middle {
+			float: left;
+		}
+
+		&--right {
+			float: right;
+		}
+
+		&--p {
+			@include fs(36px);
+			color: $lightGray;
+			font-family: 'Aleo Regular';
+			padding-top: 33px;
+		}
+
+ 	}
+
+ 	.circle {
+ 		@include w(96px);
+		@include h(96px);
+		@include br(50%);
+		@include bgCol($brown);
+		margin: 0 auto 0;
+ 	}
+
+}
+
+.sect1 {
+	@include w(100%);
+	@include h(700px);
+	background: url('../img/sect1_bg.png') -300px 0  no-repeat;
+	background-size: cover;
+	box-sizing: border-box;
+	
+	&__container {
+		width: $w90;
+		@include mgA;
+		
+		&--left, &--right {
+			@include w(50%);
+			@include h(700px);
+		}
+
+		&--left {
+			float: left;
+		}
+
+		&--right {
+			float: right;
+		}
+	}
+}
+
+.info {
+	@include w(100%);
+	@include h(371px);
+	@include bgCol(rgba(35, 35, 35, .9));
+	margin-top: 104px;
+	
+	&__h1 {
+		text-align: left;
+		@include fs(20px);
+		color: $lightGray;
+		@include j1;
+		padding: 50px 0 30px 0;
+		padding-left: 5.4%;
+	}
+
+	&__h2 {
+		text-align: left;
+		@include fs(20px);
+		color: $lightGray;
+		@include j1;
+		padding-left: 5.4%;
+		text-transform: uppercase;
+		padding-bottom: 25px;
+	}
+
+	&__p {
+		text-align: left;
+		@include fs(14px);
+		@include lH(26px);
+		color: $lightGray;
+		@include j1;
+		padding-left: 5.4%;
+	}
+
+	&__btn {
+		@include w(41.7%);
+		@include h(60px);
+		@include bgCol($mediumBlue);
+		color: $white;
+		text-transform: uppercase;
+		text-align: $tac;
+		@include fs(16px);
+		font-family: 'Aleo Regular';
+		border: none;
+		margin: 50px 0 0 5.4%;
+		@include ls(0.075em);
+	}
+}
+
+.sect2 {
+	@include w(100%);
+	@include h(700px);
+	background: url('../img/sect2_bg.png') -300px 0  no-repeat;
+	background-size: cover;
+	box-sizing: border-box;
+	
+	&__container {
+		width: $w90;
+		@include mgA;
+		
+		&--left, &--right {
+			@include w(50%);
+			@include h(700px);
+		}
+
+		&--left {
+			float: left;
+		}
+
+		&--right {
+			float: right;
+		}
+	}
+}
+
+.aside {
+	@include w(100%);
+	@include h(731px);
+	background: url('../img/aside_bg.png') -300px 0  no-repeat;
+	background-size: cover;
+	box-sizing: border-box;
+	
+	&__container {
+		width: $w90;
+		@include mgA;
+		
+		&--h1 {
+			text-align: left;
+			@include fs(36px);
+			color: $lightGray;
+			text-align: $tac;
+			font-family: 'Aleo Regular';
+			padding: 120px 0 100px 0;
+		}
+		
+		&--block {
+			@include w(100%);
+			@include h(284px);
+			@include bgCol($brown);
+			
+			&:hover {
+				transform: scale(1.1);
+				cursor: pointer;
+			}
+		}
+
+		&--block img {
+			float: left;
+		}
+
+		&--h2 {
+			text-align: left;
+			@include fs(20px);
+			text-transform: uppercase;
+			color: $white1;
+			@include j1;
+			padding: 60px 0 40px 45.5%;
+		}
+
+		&--p {
+			text-align: left;
+			@include fs(14px);
+			@include lH(26px);
+			color: $lightGray;
+			@include j1;
+			padding-left: 45.5%;
+			text-indent: 30px;
+		}
+	}
+}
+
+.foot {
+	@include w(100%);
+	@include h(268px);
+	@include bgCol($darkGray);
+	box-sizing: border-box;
+	
+	&__container {
+		width: $w90;
+		@include mgA;
+	
+		&--h1 {
+			text-align: $tac;
+			@include fs(24px);
+			color: $white;
+			@include j;
+			@include ls(0.14em);
+			padding: 120px 0 15px 0;
+		}
+
+		&--h2 {
+			text-align: $tac;
+			@include fs(16px);
+			color: $white;
+			@include j1;
+			@include ls(0.1em);
+		}
+
+		&--social {
+			@include w(100%);
+			@include h(20px);
+			margin-top: 25px;
+			text-align: $tac;
+		}
+
+		&--ul {
+			font-size: 0;
+		}
+
+		&--li {
+			display: inline-block;
+			padding: 0 2.25% 0 0;
+		}
+
+		& i {
+			@include fs(16px);
+			color: $lightGray;
+			
+			&:hover {
+				color: $mediumBlue;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+button:hover {
+	@include bgCol(inherit);
+	cursor: pointer;
+	box-sizing: border-box;
+	border: 2px solid $mediumBlue;
+	color: $mediumBlue;
+}

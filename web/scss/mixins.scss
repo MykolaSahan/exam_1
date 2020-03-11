@@ -1,0 +1,41 @@
+@mixin h($property) {
+	height: $property;
+}
+
+@mixin fs($property) {
+	font-size: $property;
+}
+
+@mixin mgA {
+	margin: 0 auto;
+}
+
+@mixin w($property) {
+	width: $property;
+}
+
+@mixin bgCol($property) {
+	background-color: $property;
+}
+
+@mixin lH($property) {
+	line-height: $property;
+}
+
+@mixin ls($property) {
+	letter-spacing: $property;
+}
+
+@mixin br($property) {
+	border-radius: $property;
+}
+
+@mixin j {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 700;
+}
+
+@mixin j1 {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 400;
+}
